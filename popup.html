@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="saveword.js"></script>
+<style>
+    #content{
+        background:black;max-height:200px;margin-top: 10px;font-family: monospace;color: white;overflow: auto;
+    }
+    #content div{
+        padding: 2px;
+    }
+    #content span{
+        float:right;padding-right: 2px;cursor: pointer;
+    }
+    #disableApp{
+        min-width: 200px;
+    }
+</style>    
+</head>
+<body>
+
+Insert Word:<br>
+<input type="text" name="firstname" id="word">
+<br><br>
+<button id="submit">Save</button>
+<div id="content">
+</div>
+<div id="disableApp">Enable App<input type="radio" name="disableApp" value="true">Enable</input><input type="radio" name="disableApp" value="false">Disable</input></div>
+<div id="showWord">Show Words<input type="radio" name="showWord" value="yes">Yes</input><input type="radio" name="showWord" value="no">No</input></div>
+</body>
+</html>

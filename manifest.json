@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Trigger-me-Timbers",
+  "version": "1.0",
+  
+ "browser_action": {
+  	"default_icon": "icon.png",
+ 	"default_popup": "popup.html"
+  },
+    
+    "background": {
+      "scripts": [ "background.js"]
+   },    
+  
+
+  "permissions": [
+    "tabs", "https://*/*", "storage"
+  ],
+  
+ "content_scripts" : [
+    {
+      "matches" : [ 
+         "http://*/*",
+         "https://*/*"
+      ],
+      "js" : [ "myscript.js" ],
+      "run_at" : "document_end",
+      "all_frames" : false
+    }
+  ]
+}
